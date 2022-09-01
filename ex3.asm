@@ -1,0 +1,45 @@
+.model SMALL
+
+.code
+
+    main proc
+    
+    MOV AH, 01  ;LER CARACTER DE 0 A 4
+    INT 21H
+    
+    SUB AL, 30H
+    MOV BL, AL ;MOVER O CARACTER 1 LIDO
+    
+    MOV AH, 02
+    MOV DL, 43  ;SIMBOLO + NO COD ASCII
+    INT 21H
+    
+    
+    MOV AH, 01  ;LER CARACTER DE 0 A 4
+    INT 21H
+     
+    SUB AL, 30H
+    MOV CL, AL ;MOVER O CARACTER 2 LIDO
+    
+    
+    MOV AH, 02
+    MOV DL, 61  ;SIMBOLO = NO COD ASCII
+    INT 21H
+    
+     
+    
+    MOV AH, 02 
+    ADD BL, CL ;SOMAR O PRIMEIRO NUMERO DIGITADO COM O SEGUNDO
+    MOV DL, BL
+    ADD DL, 30H ;TRANFORMAR PARA A TABELA ASCII REFERENTE AO RESULTADO DA SOMA 
+    INT 21H
+    
+    
+    
+    
+    MOV AH,4Ch ;exit
+    INT 21h
+    
+    MAIN ENDP
+END MAIN
+    
