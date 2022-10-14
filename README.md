@@ -13,3 +13,5 @@ ex3.asm: Fazer um programa em Assembly x86, que leia dois números inteiors sem
 sinal entre 0 e 4, some-os e imprima o resultado. 
 
 ex4.asm: Crie um programa em linguagem assembly que imprima o alfabeto inteiro, uma letra em cada linha e depois os dígitos numéricos de 0..9, um em cada linha. 
+
+ex5.asm: Fazer um programa em assembly que: Leia 2 números entre 0 e 9, armazene o primeiro número em BL e o segundo número em BH , coloque o maior dos números em BH (usar a instrução XCHG), imprimir o número maior e sua paridade, e o número menor e sua paridade. 
